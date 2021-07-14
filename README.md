@@ -1,7 +1,7 @@
 # Salvia-kit Dashboard v8 with vue3
 
 ## 📋 Documentation
-You can see the documentation on [http://localhost:3000/admin/documentation](http://localhost:3000/guides/documentation)
+You can see the documentation on [http://localhost:3000/guides/documentation](http://localhost:3000/guides/documentation)
 
 ## Browser Support
 
