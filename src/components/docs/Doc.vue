@@ -1,10 +1,7 @@
 <template>
-  <div class="py-8 max-w-full text-white">
-    <h2 class="text-3xl font-medium mb-10">Documentation</h2>
-    <section
-      class="mb-16 px-3 md:px-8 py-8"
-      style="background-color: rgb(146 151 179 / 13%)"
-    >
+  <div class="py-8 max-w-full text-gray-700 bg-white shadow">
+    <h2 class="text-3xl pl-7 font-medium mb-10">Documentation</h2>
+    <section class="mb-16 px-3 md:px-8 pt-8">
       <h2 class="text-2xl font-medium">Features</h2>
       <ul class="list-disc pl-6 mt-4">
         <li class="mb-4">Support of the active route (styled by default).</li>
@@ -21,10 +18,7 @@
       </ul>
     </section>
 
-    <section
-      class="mb-16 px-3 md:px-8 py-8"
-      style="background-color: rgb(146 151 179 / 13%)"
-    >
+    <section class="mb-16 px-3 md:px-8">
       <h2 class="text-2xl font-medium">File Structure</h2>
       <div class="pl-2">
         <div class="flex mt-4 mb-3">
@@ -45,6 +39,10 @@
         </div>
         <div class="pl-16 flex mb-3">
           <folder-icon />
+          <span class="pl-2">accordion</span>
+        </div>
+        <div class="pl-16 flex mb-3">
+          <folder-icon />
           <span class="pl-2">icons</span>
         </div>
         <div class="pl-16 flex mb-3">
@@ -62,10 +60,6 @@
         <div class="pl-16 flex mb-3">
           <vue-icon />
           <span class="pl-2">items.vue</span>
-        </div>
-        <div class="pl-16 flex mb-3">
-          <vue-icon />
-          <span class="pl-2">Section.vue</span>
         </div>
         <div class="pl-11 flex mb-3">
           <folder-icon />
@@ -94,10 +88,7 @@
       </div>
     </section>
 
-    <section
-      class="mb-16 px-3 md:px-8 py-8"
-      style="background-color: rgb(146 151 179 / 13%)"
-    >
+    <section class="mb-16 px-3 md:px-8">
       <h2 class="text-2xl font-medium">File Structure explained</h2>
       <p class="mt-5">
         We will focus on <strong>dashboard</strong> folder and its
@@ -134,6 +125,14 @@
           <folder-icon /> <strong class="px-1">sidenavigation</strong>
         </div>
         <div class="flex flex-wrap md:flex-nowrap pl-6 mt-4">
+          <folder-icon extend-class="h-5 w-5" />
+          <span class="px-2 font-medium">accordion</span> :
+          <p class="pl-1">
+            contains the <strong>Accordion</strong> component which is used to
+            toggle each section of sidenav.
+          </p>
+        </div>
+        <div class="flex flex-wrap md:flex-nowrap pl-6 mt-4">
           <folder-icon extend-class="h-7 w-7" />
           <span class="px-2 font-medium">icons</span> :
           <p class="pl-1">
@@ -159,41 +158,34 @@
           </p>
         </div>
         <div class="flex flex-wrap md:flex-nowrap pl-6 mt-6">
-          <vue-icon /><span class="px-2 font-medium">Section.vue</span> :
-          <p class="pl-1">
-            Contains the <strong> sidenav-items-section</strong> component which
-            represents each section of the sidenav.
-          </p>
-        </div>
-        <div class="flex flex-wrap md:flex-nowrap pl-6 mt-6">
           <vue-icon /><span class="px-2 font-medium">Items.vue</span> :
           <p class="pl-1">
             This <strong>sidenav-items</strong> component contains the
-            <strong> sidenav-items-section</strong> and the
-            <strong> sidenav-item</strong>components
+            <strong> accordion</strong> and
+            <strong> sidenav-item</strong> components
           </p>
         </div>
         <div class="flex flex-wrap mt-8 pl-8 mb-12">
-          <div class="md:w-6/12">
+          <div class="md:w-8/12">
             <Snippet />
           </div>
           <ul class="pt-8 md:pt-4 md:pl-4 md:w-6/12">
             <li class="mb-2">
-              <span class="px-1 font-bold">Props</span>
+              <strong class="px-1">template #item :</strong> contains the name
+              of the section
             </li>
             <li class="mb-2">
-              <strong class="px-1">name :</strong> name of the section
+              <strong class="px-1">template #panel :</strong> content of the
+              accordion (sidenav-item)
+            </li>
+            <li class="mt-4 mb-3">
+              <span class="px-1 font-bold">Props :</span>
             </li>
             <li class="mb-2">
               <strong class="px-1">title :</strong> text that indicate the route
             </li>
             <li class="mb-2">
               <strong class="px-1">to :</strong> name of the route
-            </li>
-            <li class="mb-2">
-              <strong class="px-1">sidenav-item slot :</strong> the icon,
-              imported from <strong class="px-1">icons</strong> folder or from
-              your library
             </li>
           </ul>
         </div>
@@ -230,10 +222,7 @@
       </div>
     </section>
 
-    <section
-      class="mb-16 px-3 md:px-8 py-8"
-      style="background-color: rgb(146 151 179 / 13%)"
-    >
+    <section class="mb-16 px-3 md:px-8">
       <h2 class="text-2xl font-medium">How it works ?</h2>
       <ul class="pl-6 list-disc mt-4">
         <li class="mb-3">
@@ -254,10 +243,7 @@
       </ul>
     </section>
 
-    <section
-      class="mb-16 px-3 md:px-8 py-8"
-      style="background-color: rgb(146 151 179 / 13%)"
-    >
+    <section class="mb-16 px-3 md:px-8">
       <h2 class="text-2xl font-medium">Auto Format and Linting</h2>
       <div class="mt-4">
         The dashboard is provided with <strong>eslint</strong>,
@@ -268,10 +254,7 @@
       </div>
     </section>
 
-    <section
-      class="mb-16 px-3 md:px-8 py-8"
-      style="background-color: rgb(146 151 179 / 13%)"
-    >
+    <section class="mb-16 px-3 md:px-8">
       <h2 class="text-2xl font-medium">Export</h2>
       <p class="mt-4">
         As there is no vendor lock-in, if you already have a dashboard, you can
@@ -296,10 +279,7 @@
       </div>
     </section>
 
-    <section
-      class="px-3 md:px-8 py-8 mb-16"
-      style="background-color: rgb(146 151 179 / 13%)"
-    >
+    <section class="px-3 md:px-8">
       <h2 class="text-2xl font-medium">Customization</h2>
       <p class="mt-5">
         You can customize everything according to your preferences if it doesn't
